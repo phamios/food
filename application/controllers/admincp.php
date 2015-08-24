@@ -64,11 +64,11 @@ class admincp extends CI_Controller {
     }
 
     function logout() {
-        $this->session->unset_userdata('admin_id');
-        $this->session->unset_userdata('admin_name');
-        $this->session->unset_userdata('admin_type');
-        $this->session->unset_userdata('admin_active');
-        redirect('dang-nhap');
+        $this->session->unset_userdata('userid');
+        $this->session->unset_userdata('username');
+        $this->session->unset_userdata('usertype');
+        $this->session->unset_userdata('status');
+        redirect('admincp/login');
     }
 
 
